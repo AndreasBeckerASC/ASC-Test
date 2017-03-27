@@ -1,0 +1,798 @@
+2017-01-30 09:25:59.772 DEBUG [main] OperationDesc.java:265            @5bcab519 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}checkHealthRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>checkHealthRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CheckHealthRequest
+inHeader:   false
+outHeader:  false
+@e45f292<total parameters:1
+2017-01-30 09:25:59.775 DEBUG [main] OperationDesc.java:173            @5bcab519setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>checkHealthResponse)
+2017-01-30 09:25:59.783 DEBUG [main] OperationDesc.java:265            @78c03f1f added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}versionLookupRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>versionLookupRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.VersionLookupRequest
+inHeader:   false
+outHeader:  false
+@5ec0a365<total parameters:1
+2017-01-30 09:25:59.783 DEBUG [main] OperationDesc.java:173            @78c03f1fsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>versionLookupResponse)
+2017-01-30 09:25:59.784 DEBUG [main] OperationDesc.java:265            @5383967b added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}synchronizeVehiclesRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeVehiclesRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SynchronizeVehiclesRequest
+inHeader:   false
+outHeader:  false
+@2ac273d3<total parameters:1
+2017-01-30 09:25:59.784 DEBUG [main] OperationDesc.java:173            @5383967bsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeVehiclesResponse)
+2017-01-30 09:25:59.784 DEBUG [main] OperationDesc.java:265            @20398b7c added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}synchronizeCustomersRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeCustomersRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SynchronizeCustomersRequest
+inHeader:   false
+outHeader:  false
+@6fc6f14e<total parameters:1
+2017-01-30 09:25:59.784 DEBUG [main] OperationDesc.java:173            @20398b7csetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeCustomersResponse)
+2017-01-30 09:25:59.785 DEBUG [main] OperationDesc.java:265            @3632be31 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}synchronizeContactReportsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeContactReportsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SynchronizeContactReportsRequest
+inHeader:   false
+outHeader:  false
+@5abca1e0<total parameters:1
+2017-01-30 09:25:59.785 DEBUG [main] OperationDesc.java:173            @3632be31setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>synchronizeContactReportsResponse)
+2017-01-30 09:25:59.786 DEBUG [main] OperationDesc.java:265            @6d7b4f4c added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}upsertSalesContractRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>upsertSalesContractRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.UpsertSalesContractRequest
+inHeader:   false
+outHeader:  false
+@527740a2<total parameters:1
+2017-01-30 09:25:59.786 DEBUG [main] OperationDesc.java:173            @6d7b4f4csetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>upsertSalesContractResponse)
+2017-01-30 09:25:59.787 DEBUG [main] OperationDesc.java:265            @370736d9 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}searchVehiclesRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>searchVehiclesRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SearchVehiclesRequest
+inHeader:   false
+outHeader:  false
+@5f9d02cb<total parameters:1
+2017-01-30 09:25:59.788 DEBUG [main] OperationDesc.java:173            @370736d9setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>searchVehiclesResponse)
+2017-01-30 09:25:59.789 DEBUG [main] OperationDesc.java:265            @6536e911 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getVehicleDataRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getVehicleDataRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetVehicleDataRequest
+inHeader:   false
+outHeader:  false
+@520a3426<total parameters:1
+2017-01-30 09:25:59.789 DEBUG [main] OperationDesc.java:173            @6536e911setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getVehicleDataResponse)
+2017-01-30 09:25:59.789 DEBUG [main] OperationDesc.java:265            @6c3708b3 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}createVehicleRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>createVehicleRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CreateVehicleRequest
+inHeader:   false
+outHeader:  false
+@6f1fba17<total parameters:1
+2017-01-30 09:25:59.790 DEBUG [main] OperationDesc.java:173            @6c3708b3setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>createVehicleResponse)
+2017-01-30 09:25:59.790 DEBUG [main] OperationDesc.java:265            @335eadca added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}updateVehicleDataRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>updateVehicleDataRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.UpdateVehicleDataRequest
+inHeader:   false
+outHeader:  false
+@210366b4<total parameters:1
+2017-01-30 09:25:59.790 DEBUG [main] OperationDesc.java:173            @335eadcasetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>updateVehicleDataResponse)
+2017-01-30 09:25:59.791 DEBUG [main] OperationDesc.java:265            @6ddf90b0 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}relateCustomerAndVehicleRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>relateCustomerAndVehicleRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.RelateCustomerAndVehicleRequest
+inHeader:   false
+outHeader:  false
+@57536d79<total parameters:1
+2017-01-30 09:25:59.791 DEBUG [main] OperationDesc.java:173            @6ddf90b0setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>relateCustomerAndVehicleResponse)
+2017-01-30 09:25:59.792 DEBUG [main] OperationDesc.java:265            @4b4523f8 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}searchCustomersRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>searchCustomersRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SearchCustomersRequest
+inHeader:   false
+outHeader:  false
+@731a74c<total parameters:1
+2017-01-30 09:25:59.792 DEBUG [main] OperationDesc.java:173            @4b4523f8setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>searchCustomersResponse)
+2017-01-30 09:25:59.793 DEBUG [main] OperationDesc.java:265            @7d907bac added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getCustomerDataRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getCustomerDataRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetCustomerDataRequest
+inHeader:   false
+outHeader:  false
+@7791a895<total parameters:1
+2017-01-30 09:25:59.793 DEBUG [main] OperationDesc.java:173            @7d907bacsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getCustomerDataResponse)
+2017-01-30 09:25:59.794 DEBUG [main] OperationDesc.java:265            @1d16f93d added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}createCustomerRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>createCustomerRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CreateCustomerRequest
+inHeader:   false
+outHeader:  false
+@67b92f0a<total parameters:1
+2017-01-30 09:25:59.794 DEBUG [main] OperationDesc.java:173            @1d16f93dsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>createCustomerResponse)
+2017-01-30 09:25:59.794 DEBUG [main] OperationDesc.java:265            @4f970963 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}updateCustomerDataRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>updateCustomerDataRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.UpdateCustomerDataRequest
+inHeader:   false
+outHeader:  false
+@61f8bee4<total parameters:1
+2017-01-30 09:25:59.795 DEBUG [main] OperationDesc.java:173            @4f970963setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>updateCustomerDataResponse)
+2017-01-30 09:25:59.796 DEBUG [main] OperationDesc.java:265            @7fac631b added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getPricesAndAvailabilitiesRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getPricesAndAvailabilitiesRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetPricesAndAvailabilitiesRequest
+inHeader:   false
+outHeader:  false
+@5b87ed94<total parameters:1
+2017-01-30 09:25:59.796 DEBUG [main] OperationDesc.java:173            @7fac631bsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getPricesAndAvailabilitiesResponse)
+2017-01-30 09:25:59.797 DEBUG [main] OperationDesc.java:265            @47ef968d added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}searchServiceAppointmentsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>searchServiceAppointmentsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SearchServiceAppointmentsRequest
+inHeader:   false
+outHeader:  false
+@23e028a9<total parameters:1
+2017-01-30 09:25:59.798 DEBUG [main] OperationDesc.java:173            @47ef968dsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>searchServiceAppointmentsResponse)
+2017-01-30 09:25:59.799 DEBUG [main] OperationDesc.java:265            @610694f1 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getServiceAppointmentDetailsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getServiceAppointmentDetailsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetServiceAppointmentDetailsRequest
+inHeader:   false
+outHeader:  false
+@43814d18<total parameters:1
+2017-01-30 09:25:59.799 DEBUG [main] OperationDesc.java:173            @610694f1setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getServiceAppointmentDetailsResponse)
+2017-01-30 09:25:59.800 DEBUG [main] OperationDesc.java:265            @627551fb added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}createServiceAppointmentRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>createServiceAppointmentRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CreateServiceAppointmentRequest
+inHeader:   false
+outHeader:  false
+@2b552920<total parameters:1
+2017-01-30 09:25:59.800 DEBUG [main] OperationDesc.java:173            @627551fbsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>createServiceAppointmentResponse)
+2017-01-30 09:25:59.801 DEBUG [main] OperationDesc.java:265            @578486a3 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}updateServiceAppointmentRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>updateServiceAppointmentRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.UpdateServiceAppointmentRequest
+inHeader:   false
+outHeader:  false
+@551aa95a<total parameters:1
+2017-01-30 09:25:59.801 DEBUG [main] OperationDesc.java:173            @578486a3setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>updateServiceAppointmentResponse)
+2017-01-30 09:25:59.803 DEBUG [main] OperationDesc.java:265            @6ebc05a6 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}cancelServiceAppointmentRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>cancelServiceAppointmentRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CancelServiceAppointmentRequest
+inHeader:   false
+outHeader:  false
+@6e6c3152<total parameters:1
+2017-01-30 09:25:59.803 DEBUG [main] OperationDesc.java:173            @6ebc05a6setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>cancelServiceAppointmentResponse)
+2017-01-30 09:25:59.804 DEBUG [main] OperationDesc.java:265            @32709393 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}searchServiceOrdersRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>searchServiceOrdersRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.SearchServiceOrdersRequest
+inHeader:   false
+outHeader:  false
+@3d99d22e<total parameters:1
+2017-01-30 09:25:59.805 DEBUG [main] OperationDesc.java:173            @32709393setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>searchServiceOrdersResponse)
+2017-01-30 09:25:59.805 DEBUG [main] OperationDesc.java:265            @3a883ce7 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getServiceOrderDetailsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getServiceOrderDetailsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetServiceOrderDetailsRequest
+inHeader:   false
+outHeader:  false
+@4973813a<total parameters:1
+2017-01-30 09:25:59.806 DEBUG [main] OperationDesc.java:173            @3a883ce7setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getServiceOrderDetailsResponse)
+2017-01-30 09:25:59.806 DEBUG [main] OperationDesc.java:265            @22a67b4 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}createServiceOrderRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>createServiceOrderRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CreateServiceOrderRequest
+inHeader:   false
+outHeader:  false
+@57855c9a<total parameters:1
+2017-01-30 09:25:59.807 DEBUG [main] OperationDesc.java:173            @22a67b4setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>createServiceOrderResponse)
+2017-01-30 09:25:59.807 DEBUG [main] OperationDesc.java:265            @63e2203c added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}updateServiceOrderHeaderRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>updateServiceOrderHeaderRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.UpdateServiceOrderHeaderRequest
+inHeader:   false
+outHeader:  false
+@1efed156<total parameters:1
+2017-01-30 09:25:59.808 DEBUG [main] OperationDesc.java:173            @63e2203csetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>updateServiceOrderHeaderResponse)
+2017-01-30 09:25:59.808 DEBUG [main] OperationDesc.java:265            @a7e666 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}addServiceOrderJobsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>addServiceOrderJobsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.AddServiceOrderJobsRequest
+inHeader:   false
+outHeader:  false
+@68bbe345<total parameters:1
+2017-01-30 09:25:59.809 DEBUG [main] OperationDesc.java:173            @a7e666setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>addServiceOrderJobsResponse)
+2017-01-30 09:25:59.809 DEBUG [main] OperationDesc.java:265            @4bbfb90a added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getLocalGroupListRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getLocalGroupListRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetLocalGroupListRequest
+inHeader:   false
+outHeader:  false
+@7c29daf3<total parameters:1
+2017-01-30 09:25:59.809 DEBUG [main] OperationDesc.java:173            @4bbfb90asetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getLocalGroupListResponse)
+2017-01-30 09:25:59.810 DEBUG [main] OperationDesc.java:265            @6c49835d added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getLocalGroupDetailsRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getLocalGroupDetailsRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetLocalGroupDetailsRequest
+inHeader:   false
+outHeader:  false
+@5e853265<total parameters:1
+2017-01-30 09:25:59.810 DEBUG [main] OperationDesc.java:173            @6c49835dsetReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getLocalGroupDetailsResponse)
+2017-01-30 09:25:59.811 DEBUG [main] OperationDesc.java:265            @5d76b067 added parameter >name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}getDcomConfigurationRequest
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>getDcomConfigurationRequest
+javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.GetDcomConfigurationRequest
+inHeader:   false
+outHeader:  false
+@2a17b7b6<total parameters:1
+2017-01-30 09:25:59.811 DEBUG [main] OperationDesc.java:173            @5d76b067setReturnType({http://www.bmwgroup.com/dmsCommunications/v1/types}>getDcomConfigurationResponse)
+2017-01-30 09:25:59.835 DEBUG [main] ProjectResourceBundle.java:264    getBundle(org.apache.axis,org.apache.axis.i18n,resource,null,...)
+2017-01-30 09:25:59.844 DEBUG [main] ProjectResourceBundle.java:423    loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale de_DE
+2017-01-30 09:25:59.844 DEBUG [main] ProjectResourceBundle.java:318    Created org.apache.axis.i18n.resource, linked to parent null
+2017-01-30 09:25:59.845 DEBUG [main] ProjectResourceBundle.java:264    getBundle(org.apache.axis,org.apache.axis.utils,resource,null,...)
+2017-01-30 09:25:59.846 DEBUG [main] ProjectResourceBundle.java:423    loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.utils.resource, locale de_DE
+2017-01-30 09:25:59.846 DEBUG [main] ProjectResourceBundle.java:423    loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale de_DE
+2017-01-30 09:25:59.846 DEBUG [main] ProjectResourceBundle.java:328    Root package not found, cross link to org.apache.axis.i18n.resource
+2017-01-30 09:25:59.846 DEBUG [main] ProjectResourceBundle.java:328    Root package not found, cross link to org.apache.axis.i18n.resource
+2017-01-30 09:25:59.847 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(engineFactory)
+2017-01-30 09:25:59.847 DEBUG [main] EngineConfigurationFactoryFinder.java:141 Got EngineFactory: org.apache.axis.configuration.EngineConfigurationFactoryDefault
+2017-01-30 09:25:59.849 DEBUG [main] AxisEngine.java:165               Enter: AxisEngine::init
+2017-01-30 09:25:59.895 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+2017-01-30 09:25:59.896 DEBUG [main] JavaUtils.java:1305               Attachment support is enabled?  true
+2017-01-30 09:25:59.903 DEBUG [main] JAFDataHandlerDeserializerFactory.java:39 Enter/Exit: JAFDataHandlerDeserializerFactory(class java.lang.String, {http://xml.apache.org/xml-soap}PlainText)
+2017-01-30 09:25:59.904 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(oddDigits00)
+2017-01-30 09:25:59.904 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(badChars01)
+2017-01-30 09:25:59.936 DEBUG [main] JAFDataHandlerDeserializerFactory.java:39 Enter/Exit: JAFDataHandlerDeserializerFactory(class java.awt.Image, {http://xml.apache.org/xml-soap}Image)
+2017-01-30 09:25:59.938 DEBUG [main] JAFDataHandlerDeserializerFactory.java:39 Enter/Exit: JAFDataHandlerDeserializerFactory(class javax.mail.internet.MimeMultipart, {http://xml.apache.org/xml-soap}Multipart)
+2017-01-30 09:25:59.939 DEBUG [main] JAFDataHandlerDeserializerFactory.java:39 Enter/Exit: JAFDataHandlerDeserializerFactory(interface javax.xml.transform.Source, {http://xml.apache.org/xml-soap}Source)
+2017-01-30 09:25:59.940 DEBUG [main] JAFDataHandlerDeserializerFactory.java:39 Enter/Exit: JAFDataHandlerDeserializerFactory(class org.apache.axis.attachments.OctetStream, {http://xml.apache.org/xml-soap}octet-stream)
+2017-01-30 09:25:59.940 DEBUG [main] JAFDataHandlerDeserializerFactory.java:44 Enter/Exit: JAFDataHandlerDeserializerFactory()
+2017-01-30 09:25:59.967 DEBUG [main] AxisEngine.java:195               Exit: AxisEngine::init
+2017-01-30 09:26:00.458 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(transport00)
+2017-01-30 09:26:00.459 DEBUG [main] Call.java:2119                    Transport is org.apache.axis.transport.http.HTTPTransport@22a637e7
+2017-01-30 09:26:00.765 DEBUG [main] Call.java:2351                    Enter: Call::invoke(ns, meth, args)
+2017-01-30 09:26:00.771 DEBUG [main] Call.java:2043                    operation=name:        checkHealth
+returnQName: {http://www.bmwgroup.com/dmsCommunications/v1/types}checkHealthResponse
+returnType:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>checkHealthResponse
+returnClass: class com.bmwgroup.www.dmsCommunications.v1.types.CheckHealthResponse
+elementQName:null
+soapAction:  null
+style:       document
+use:         literal
+numInParams: 1
+method:null
+ ParameterDesc[0]:
+  name:       {http://www.bmwgroup.com/dmsCommunications/v1/types}checkHealthRequest
+  typeEntry:  null
+  mode:       IN
+  position:   0
+  isReturn:   false
+  typeQName:  {http://www.bmwgroup.com/dmsCommunications/v1/types}>checkHealthRequest
+  javaType:   class com.bmwgroup.www.dmsCommunications.v1.types.CheckHealthRequest
+  inHeader:   false
+  outHeader:  false
+
+
+2017-01-30 09:26:00.771 DEBUG [main] Call.java:2045                    operation.getNumParams()=1
+2017-01-30 09:26:00.771 DEBUG [main] Call.java:2068                    getParamList number of params: 1
+2017-01-30 09:26:00.774 DEBUG [main] Call.java:2405                    Enter: Call::invoke(RPCElement)
+2017-01-30 09:26:00.784 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+2017-01-30 09:26:00.785 DEBUG [main] Message.java:289                  Attachment support is enabled?  true
+2017-01-30 09:26:00.790 DEBUG [main] SOAPPart.java:182                 Enter: SOAPPart ctor(FORM_SOAPENVELOPE)
+2017-01-30 09:26:00.790 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2017-01-30 09:26:00.790 DEBUG [main] SOAPPart.java:374                 Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
+2017-01-30 09:26:00.790 DEBUG [main] SOAPPart.java:188                 Exit: SOAPPart ctor()
+2017-01-30 09:26:00.790 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(addBody00)
+2017-01-30 09:26:00.790 DEBUG [main] SOAPBody.java:168                 Adding body element to message...
+2017-01-30 09:26:00.791 DEBUG [main] Call.java:2638                    Enter: Call::invoke()
+2017-01-30 09:26:00.791 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.791 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.791 DEBUG [main] SOAPPart.java:662                 current form is FORM_SOAPENVELOPE
+2017-01-30 09:26:00.791 DEBUG [main] MessageContext.java:749           MessageContext: setTargetService()
+2017-01-30 09:26:00.791 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(noService10)
+2017-01-30 09:26:00.795 DEBUG [main] ConfigurationException.java:110   Exception: 
+org.apache.axis.ConfigurationException: No service named  is available
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2708) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2443) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2366) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:1812) [axis-1.4_2.jar:1.4_2]
+	at com.bmwgroup.www.dmsCommunications.v1.DmsComBindingStub.checkHealth(DmsComBindingStub.java:4003) [dcom.jar:na]
+	at com.asc_ag.bmw.dcom.generator.synchronizeDMS2RSP.checkHealth(synchronizeDMS2RSP.java:181) [dcom.jar:na]
+	at test.main(test.java:20) [bin/:na]
+2017-01-30 09:26:00.795 DEBUG [main] MessageContext.java:793           MessageContext: setServiceHandler(null)
+2017-01-30 09:26:00.796 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(targetService)
+2017-01-30 09:26:00.796 DEBUG [main] Call.java:2715                    Target service:  
+2017-01-30 09:26:00.796 DEBUG [main] MessageContext.java:749           MessageContext: setTargetService(http://www.bmwgroup.com/dmsCom/checkHealth)
+2017-01-30 09:26:00.796 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(noService10)
+2017-01-30 09:26:00.796 DEBUG [main] ConfigurationException.java:110   Exception: 
+org.apache.axis.ConfigurationException: No service named http://www.bmwgroup.com/dmsCom/checkHealth is available
+	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.MessageContext.setTargetService(MessageContext.java:756) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.transport.http.HTTPTransport.setupMessageContextImpl(HTTPTransport.java:89) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Transport.setupMessageContext(Transport.java:46) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2738) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2443) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:2366) [axis-1.4_2.jar:1.4_2]
+	at org.apache.axis.client.Call.invoke(Call.java:1812) [axis-1.4_2.jar:1.4_2]
+	at com.bmwgroup.www.dmsCommunications.v1.DmsComBindingStub.checkHealth(DmsComBindingStub.java:4003) [dcom.jar:na]
+	at com.asc_ag.bmw.dcom.generator.synchronizeDMS2RSP.checkHealth(synchronizeDMS2RSP.java:181) [dcom.jar:na]
+	at test.main(test.java:20) [bin/:na]
+2017-01-30 09:26:00.797 DEBUG [main] MessageContext.java:793           MessageContext: setServiceHandler(null)
+2017-01-30 09:26:00.801 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.801 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.801 DEBUG [main] SOAPPart.java:662                 current form is FORM_SOAPENVELOPE
+2017-01-30 09:26:00.801 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.801 DEBUG [main] SerializationContext.java:472     register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.801 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.802 DEBUG [main] SerializationContext.java:472     register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.802 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.802 DEBUG [main] SerializationContext.java:472     register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+2017-01-30 09:26:00.802 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.802 DEBUG [main] SerializationContext.java:472     register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+2017-01-30 09:26:00.802 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.803 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2017-01-30 09:26:00.805 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.806 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2017-01-30 09:26:00.806 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.806 DEBUG [main] SerializationContext.java:472     register '' - 'http://www.bmwgroup.com/dmsCommunications/v1/types'
+2017-01-30 09:26:00.808 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.809 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:checkHealthRequest
+2017-01-30 09:26:00.815 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.815 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:technicalHeader
+2017-01-30 09:26:00.818 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.819 DEBUG [main] SerializationContext.java:1208    End element technicalHeader
+2017-01-30 09:26:00.819 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.819 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:businessHeader
+2017-01-30 09:26:00.820 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.820 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:dealerType
+2017-01-30 09:26:00.820 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.820 DEBUG [main] SerializationContext.java:1208    End element dealerType
+2017-01-30 09:26:00.820 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.821 DEBUG [main] SerializationContext.java:1208    End element businessHeader
+2017-01-30 09:26:00.821 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.821 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:userInformation
+2017-01-30 09:26:00.822 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.822 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:locale
+2017-01-30 09:26:00.822 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.823 DEBUG [main] SerializationContext.java:1208    End element locale
+2017-01-30 09:26:00.823 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.823 DEBUG [main] SerializationContext.java:1208    End element userInformation
+2017-01-30 09:26:00.823 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.823 DEBUG [main] SerializationContext.java:1208    End element checkHealthRequest
+2017-01-30 09:26:00.823 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.824 DEBUG [main] SerializationContext.java:1208    End element soapenv:Body
+2017-01-30 09:26:00.824 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.824 DEBUG [main] SerializationContext.java:1208    End element soapenv:Envelope
+2017-01-30 09:26:00.824 DEBUG [main] Call.java:2762                    <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><checkHealthRequest xmlns="http://www.bmwgroup.com/dmsCommunications/v1/types"><technicalHeader application="DMS_care" interactionId="a122c25ef4274e86b8a904aaf12f82fa" schemaName="BmwDcom" schemaVersion="1.3.5"/><businessHeader><dealerType businessNumber="04544" distributionPartnerNumber="04544"/></businessHeader><userInformation><locale>de-DE</locale></userInformation></checkHealthRequest></soapenv:Body></soapenv:Envelope>
+2017-01-30 09:26:00.824 DEBUG [main] AxisClient.java:77                Enter: AxisClient::invoke
+2017-01-30 09:26:00.824 DEBUG [main] AxisClient.java:90                EngineHandler: null
+2017-01-30 09:26:00.828 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(axisUserAgent)
+2017-01-30 09:26:00.833 DEBUG [main] SimpleChain.java:79               Enter: SimpleChain::invoke
+2017-01-30 09:26:00.833 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(enter00)
+2017-01-30 09:26:00.833 DEBUG [main] HTTPSender.java:125               Enter:  HTTPSender::invoke
+2017-01-30 09:26:00.834 DEBUG [main] SOAPPart.java:524                 Enter: SOAPPart::saveChanges
+2017-01-30 09:26:00.836 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.836 DEBUG [main] SerializationContext.java:472     register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.836 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.837 DEBUG [main] SerializationContext.java:472     register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.837 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.837 DEBUG [main] SerializationContext.java:472     register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+2017-01-30 09:26:00.837 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.837 DEBUG [main] SerializationContext.java:472     register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+2017-01-30 09:26:00.837 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.838 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2017-01-30 09:26:00.838 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.838 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2017-01-30 09:26:00.838 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.838 DEBUG [main] SerializationContext.java:472     register '' - 'http://www.bmwgroup.com/dmsCommunications/v1/types'
+2017-01-30 09:26:00.839 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.839 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:checkHealthRequest
+2017-01-30 09:26:00.839 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.839 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:technicalHeader
+2017-01-30 09:26:00.840 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.840 DEBUG [main] SerializationContext.java:1208    End element technicalHeader
+2017-01-30 09:26:00.840 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.840 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:businessHeader
+2017-01-30 09:26:00.840 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.841 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:dealerType
+2017-01-30 09:26:00.841 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.841 DEBUG [main] SerializationContext.java:1208    End element dealerType
+2017-01-30 09:26:00.841 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.841 DEBUG [main] SerializationContext.java:1208    End element businessHeader
+2017-01-30 09:26:00.841 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.842 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:userInformation
+2017-01-30 09:26:00.842 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.842 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:locale
+2017-01-30 09:26:00.842 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.842 DEBUG [main] SerializationContext.java:1208    End element locale
+2017-01-30 09:26:00.843 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.843 DEBUG [main] SerializationContext.java:1208    End element userInformation
+2017-01-30 09:26:00.843 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.843 DEBUG [main] SerializationContext.java:1208    End element checkHealthRequest
+2017-01-30 09:26:00.843 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.843 DEBUG [main] SerializationContext.java:1208    End element soapenv:Body
+2017-01-30 09:26:00.844 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.844 DEBUG [main] SerializationContext.java:1208    End element soapenv:Envelope
+2017-01-30 09:26:00.844 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2017-01-30 09:26:00.844 DEBUG [main] SOAPPart.java:374                 Setting current message form to: FORM_OPTIMIZED (currentMessage is now org.apache.axis.utils.ByteArray)
+2017-01-30 09:26:00.844 DEBUG [main] SOAPPart.java:537                 Exit: SOAPPart::saveChanges(): org.apache.axis.utils.ByteArray@41a2befb
+2017-01-30 09:26:00.845 DEBUG [main] SOAPPart.java:524                 Enter: SOAPPart::saveChanges
+2017-01-30 09:26:00.845 DEBUG [main] SOAPPart.java:524                 Enter: SOAPPart::saveChanges
+2017-01-30 09:26:00.855 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(createdHTTP00)
+2017-01-30 09:26:00.855 DEBUG [main] DefaultSocketFactory.java:122     Created an insecure HTTP connection
+2017-01-30 09:26:00.856 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(xmlSent00)
+2017-01-30 09:26:00.856 DEBUG [main] HTTPSender.java:484               XML sent:
+2017-01-30 09:26:00.856 DEBUG [main] HTTPSender.java:485               ---------------------------------------------------
+2017-01-30 09:26:00.856 DEBUG [main] SOAPPart.java:524                 Enter: SOAPPart::saveChanges
+2017-01-30 09:26:00.857 DEBUG [main] HTTPSender.java:519               POST /dcom-rsp/dcom/1.3.5 HTTP/1.0
+Content-Type: text/xml; charset=utf-8
+Accept: application/soap+xml, application/dime, multipart/related, text/*
+User-Agent: Axis/1.4
+Host: ASC-D-W7-NBAB:26000
+Cache-Control: no-cache
+Pragma: no-cache
+SOAPAction: "http://www.bmwgroup.com/dmsCom/checkHealth"
+Content-Length: 654
+
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><checkHealthRequest xmlns="http://www.bmwgroup.com/dmsCommunications/v1/types"><technicalHeader application="DMS_care" interactionId="a122c25ef4274e86b8a904aaf12f82fa" schemaName="BmwDcom" schemaVersion="1.3.5"/><businessHeader><dealerType businessNumber="04544" distributionPartnerNumber="04544"/></businessHeader><userInformation><locale>de-DE</locale></userInformation></checkHealthRequest></soapenv:Body></soapenv:Envelope>
+2017-01-30 09:26:00.867 DEBUG [main] HTTPSender.java:627               HTTP/1.1 200 OK
+2017-01-30 09:26:00.868 DEBUG [main] HTTPSender.java:627               Content-Type text/xml; charset=UTF-8
+2017-01-30 09:26:00.868 DEBUG [main] HTTPSender.java:627               Server Jetty(9.2.14.v20151106)
+2017-01-30 09:26:00.869 DEBUG [main] SOAPPart.java:182                 Enter: SOAPPart ctor(FORM_INPUTSTREAM)
+2017-01-30 09:26:00.869 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2017-01-30 09:26:00.869 DEBUG [main] SOAPPart.java:374                 Setting current message form to: FORM_INPUTSTREAM (currentMessage is now org.apache.axis.transport.http.SocketInputStream)
+2017-01-30 09:26:00.869 DEBUG [main] SOAPPart.java:188                 Exit: SOAPPart ctor()
+2017-01-30 09:26:00.869 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(no00)
+2017-01-30 09:26:00.869 DEBUG [main] HTTPSender.java:791               
+no Content-Length
+2017-01-30 09:26:00.869 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(xmlRecd00)
+2017-01-30 09:26:00.870 DEBUG [main] HTTPSender.java:794               
+XML received:
+2017-01-30 09:26:00.870 DEBUG [main] HTTPSender.java:795               -----------------------------------------------
+2017-01-30 09:26:00.870 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.870 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.870 DEBUG [main] SOAPPart.java:662                 current form is FORM_INPUTSTREAM
+2017-01-30 09:26:00.876 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.876 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.EnvelopeHandler@65d09a04
+2017-01-30 09:26:00.877 DEBUG [main] DeserializationContext.java:886   Enter: DeserializationContext::startPrefixMapping(soap, http://schemas.xmlsoap.org/soap/envelope/)
+2017-01-30 09:26:00.878 DEBUG [main] DeserializationContext.java:925   Exit: DeserializationContext::startPrefixMapping()
+2017-01-30 09:26:00.878 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://schemas.xmlsoap.org/soap/envelope/, Envelope)
+2017-01-30 09:26:00.878 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.879 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.EnvelopeBuilder@33c911a1
+2017-01-30 09:26:00.879 DEBUG [main] DeserializationContext.java:765   Pushing element Envelope
+2017-01-30 09:26:00.879 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.879 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://schemas.xmlsoap.org/soap/envelope/, Body)
+2017-01-30 09:26:00.881 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.881 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.BodyBuilder@1190200a
+2017-01-30 09:26:00.881 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2017-01-30 09:26:00.881 DEBUG [main] MessageElement.java:239           New MessageElement (org.apache.axis.message.SOAPBody@6a2f6f80) named {soap}Body
+2017-01-30 09:26:00.882 DEBUG [main] DeserializationContext.java:765   Pushing element Body
+2017-01-30 09:26:00.882 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.882 DEBUG [main] DeserializationContext.java:886   Enter: DeserializationContext::startPrefixMapping(, http://www.bmwgroup.com/dmsCommunications/v1/types)
+2017-01-30 09:26:00.882 DEBUG [main] DeserializationContext.java:925   Exit: DeserializationContext::startPrefixMapping()
+2017-01-30 09:26:00.882 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, checkHealthResponse)
+2017-01-30 09:26:00.883 DEBUG [main] BodyBuilder.java:109              Enter: BodyBuilder::onStartChild()
+2017-01-30 09:26:00.883 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2017-01-30 09:26:00.883 DEBUG [main] MessageElement.java:239           New MessageElement (org.apache.axis.message.RPCElement@45b4c3a9) named {}checkHealthResponse
+2017-01-30 09:26:00.883 DEBUG [main] BodyBuilder.java:222              Exit: BodyBuilder::onStartChild()
+2017-01-30 09:26:00.883 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.884 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.SOAPHandler@399c4be1
+2017-01-30 09:26:00.884 DEBUG [main] DeserializationContext.java:765   Pushing element checkHealthResponse
+2017-01-30 09:26:00.884 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.884 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, technicalHeader)
+2017-01-30 09:26:00.884 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.885 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.SOAPHandler@291caca8
+2017-01-30 09:26:00.885 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2017-01-30 09:26:00.885 DEBUG [main] MessageElement.java:239           New MessageElement (org.apache.axis.message.MessageElement@385e9564) named {}technicalHeader
+2017-01-30 09:26:00.885 DEBUG [main] MessageElement.java:242             schemaName = 'BmwDcom'
+2017-01-30 09:26:00.885 DEBUG [main] MessageElement.java:242             schemaVersion = '1.3.5'
+2017-01-30 09:26:00.885 DEBUG [main] MessageElement.java:242             interactionId = 'a122c25ef4274e86b8a904aaf12f82fa'
+2017-01-30 09:26:00.886 DEBUG [main] MessageElement.java:242             application = 'DMS_care'
+2017-01-30 09:26:00.886 DEBUG [main] DeserializationContext.java:765   Pushing element technicalHeader
+2017-01-30 09:26:00.886 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.886 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, technicalHeader)
+2017-01-30 09:26:00.886 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.887 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.SOAPHandler@291caca8
+2017-01-30 09:26:00.887 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.RPCElement:checkHealthResponse
+2017-01-30 09:26:00.887 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.887 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, businessHeader)
+2017-01-30 09:26:00.887 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.887 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.SOAPHandler@5b94b04d
+2017-01-30 09:26:00.887 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2017-01-30 09:26:00.888 DEBUG [main] MessageElement.java:239           New MessageElement (org.apache.axis.message.MessageElement@8c3b9d) named {}businessHeader
+2017-01-30 09:26:00.888 DEBUG [main] DeserializationContext.java:765   Pushing element businessHeader
+2017-01-30 09:26:00.888 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.888 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, dealerType)
+2017-01-30 09:26:00.888 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.888 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.SOAPHandler@4c39bec8
+2017-01-30 09:26:00.888 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(newElem00)
+2017-01-30 09:26:00.888 DEBUG [main] MessageElement.java:239           New MessageElement (org.apache.axis.message.MessageElement@f79e) named {}dealerType
+2017-01-30 09:26:00.888 DEBUG [main] MessageElement.java:242             distributionPartnerNumber = '04544'
+2017-01-30 09:26:00.889 DEBUG [main] MessageElement.java:242             businessNumber = '04544'
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:765   Pushing element dealerType
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, dealerType)
+2017-01-30 09:26:00.889 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.SOAPHandler@4c39bec8
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.MessageElement:businessHeader
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, businessHeader)
+2017-01-30 09:26:00.889 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.889 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.SOAPHandler@5b94b04d
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.RPCElement:checkHealthResponse
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, checkHealthResponse)
+2017-01-30 09:26:00.890 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.SOAPHandler@399c4be1
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.SOAPBody:Body
+2017-01-30 09:26:00.890 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:933   Enter: DeserializationContext::endPrefixMapping()
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:945   Exit: DeserializationContext::endPrefixMapping()
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://schemas.xmlsoap.org/soap/envelope/, Body)
+2017-01-30 09:26:00.891 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.BodyBuilder@1190200a
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.SOAPEnvelope:Envelope
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://schemas.xmlsoap.org/soap/envelope/, Envelope)
+2017-01-30 09:26:00.891 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.message.EnvelopeBuilder@33c911a1
+2017-01-30 09:26:00.891 DEBUG [main] DeserializationContext.java:1106  Popped element stack to null
+2017-01-30 09:26:00.892 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.892 DEBUG [main] DeserializationContext.java:933   Enter: DeserializationContext::endPrefixMapping(soap)
+2017-01-30 09:26:00.892 DEBUG [main] DeserializationContext.java:945   Exit: DeserializationContext::endPrefixMapping()
+2017-01-30 09:26:00.892 DEBUG [main] DeserializationContext.java:858   Enter: DeserializationContext::endDocument()
+2017-01-30 09:26:00.892 DEBUG [main] DeserializationContext.java:866   Exit: DeserializationContext::endDocument()
+2017-01-30 09:26:00.892 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2017-01-30 09:26:00.893 DEBUG [main] SOAPPart.java:374                 Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
+2017-01-30 09:26:00.893 DEBUG [main] SOAPPart.java:724                 Exit: SOAPPart::getAsSOAPEnvelope
+2017-01-30 09:26:00.893 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.893 DEBUG [main] SerializationContext.java:472     register 'soap' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.893 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.893 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2017-01-30 09:26:00.894 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.894 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2017-01-30 09:26:00.895 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.895 DEBUG [main] SerializationContext.java:472     register '' - 'http://www.bmwgroup.com/dmsCommunications/v1/types'
+2017-01-30 09:26:00.896 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' checkHealthResponse]
+2017-01-30 09:26:00.896 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.896 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:checkHealthResponse
+2017-01-30 09:26:00.896 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' technicalHeader]
+2017-01-30 09:26:00.896 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.897 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:technicalHeader
+2017-01-30 09:26:00.897 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' technicalHeader]
+2017-01-30 09:26:00.897 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.897 DEBUG [main] SerializationContext.java:1208    End element technicalHeader
+2017-01-30 09:26:00.897 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' businessHeader]
+2017-01-30 09:26:00.897 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.897 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:businessHeader
+2017-01-30 09:26:00.897 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' dealerType]
+2017-01-30 09:26:00.898 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.898 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:dealerType
+2017-01-30 09:26:00.898 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' dealerType]
+2017-01-30 09:26:00.898 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.898 DEBUG [main] SerializationContext.java:1208    End element dealerType
+2017-01-30 09:26:00.898 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' businessHeader]
+2017-01-30 09:26:00.898 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.898 DEBUG [main] SerializationContext.java:1208    End element businessHeader
+2017-01-30 09:26:00.898 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' checkHealthResponse]
+2017-01-30 09:26:00.899 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.899 DEBUG [main] SerializationContext.java:1208    End element checkHealthResponse
+2017-01-30 09:26:00.899 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.899 DEBUG [main] SerializationContext.java:1208    End element soap:Body
+2017-01-30 09:26:00.899 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.899 DEBUG [main] SerializationContext.java:1208    End element soap:Envelope
+2017-01-30 09:26:00.899 DEBUG [main] HTTPSender.java:796               <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><checkHealthResponse xmlns="http://www.bmwgroup.com/dmsCommunications/v1/types"><technicalHeader schemaName="BmwDcom" schemaVersion="1.3.5" interactionId="a122c25ef4274e86b8a904aaf12f82fa" application="DMS_care"/><businessHeader><dealerType distributionPartnerNumber="04544" businessNumber="04544"/></businessHeader></checkHealthResponse></soap:Body></soap:Envelope>
+2017-01-30 09:26:00.899 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(exit00)
+2017-01-30 09:26:00.899 DEBUG [main] HTTPSender.java:157               Exit:  HTTPDispatchHandler::invoke
+2017-01-30 09:26:00.899 DEBUG [main] SimpleChain.java:86               Exit: SimpleChain::invoke
+2017-01-30 09:26:00.899 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(semanticCheck00)
+2017-01-30 09:26:00.899 DEBUG [main] MustUnderstandChecker.java:55     Doing SOAP semantic checks...
+2017-01-30 09:26:00.899 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.900 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.900 DEBUG [main] SOAPPart.java:662                 current form is FORM_SOAPENVELOPE
+2017-01-30 09:26:00.900 DEBUG [main] AxisClient.java:226               Exit: AxisClient::invoke
+2017-01-30 09:26:00.900 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.900 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.900 DEBUG [main] SOAPPart.java:662                 current form is FORM_SOAPENVELOPE
+2017-01-30 09:26:00.900 DEBUG [main] Call.java:2773                    Exit: Call::invoke()
+2017-01-30 09:26:00.900 DEBUG [main] SOAPPart.java:661                 Enter: SOAPPart::getAsSOAPEnvelope()
+2017-01-30 09:26:00.900 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(currForm)
+2017-01-30 09:26:00.900 DEBUG [main] SOAPPart.java:662                 current form is FORM_SOAPENVELOPE
+2017-01-30 09:26:00.901 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.901 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.message.RPCHandler@1e178745
+2017-01-30 09:26:00.901 DEBUG [main] DeserializationContext.java:886   Enter: DeserializationContext::startPrefixMapping(, http://www.bmwgroup.com/dmsCommunications/v1/types)
+2017-01-30 09:26:00.901 DEBUG [main] DeserializationContext.java:925   Exit: DeserializationContext::startPrefixMapping()
+2017-01-30 09:26:00.901 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, checkHealthResponse)
+2017-01-30 09:26:00.901 DEBUG [main] RPCHandler.java:125               Enter: RPCHandler.onStartChild()
+2017-01-30 09:26:00.901 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(typeFromAttr00)
+2017-01-30 09:26:00.901 DEBUG [main] RPCHandler.java:169               Type from attributes is:  null
+2017-01-30 09:26:00.903 DEBUG [main] RPCHandler.java:303               Exit: RPCHandler.onStartChild()
+2017-01-30 09:26:00.903 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.903 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.encoding.ser.BeanDeserializer@2e377400
+2017-01-30 09:26:00.904 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.904 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, technicalHeader)
+2017-01-30 09:26:00.906 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.906 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.encoding.ser.BeanDeserializer@49e5f737
+2017-01-30 09:26:00.908 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.908 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, technicalHeader)
+2017-01-30 09:26:00.909 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.909 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.encoding.ser.BeanDeserializer@49e5f737
+2017-01-30 09:26:00.909 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.909 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeTechnicalHeader@cdb6a5c4 in target org.apache.axis.encoding.ser.BeanPropertyTarget@687e99d8
+2017-01-30 09:26:00.909 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.909 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeTechnicalHeader@cdb6a5c4 in target org.apache.axis.encoding.CallbackTarget@e4487af
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.RPCElement:checkHealthResponse
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, businessHeader)
+2017-01-30 09:26:00.910 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.encoding.ser.BeanDeserializer@6aaceffd
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.910 DEBUG [main] DeserializationContext.java:1003  Enter: DeserializationContext::startElement(http://www.bmwgroup.com/dmsCommunications/v1/types, dealerType)
+2017-01-30 09:26:00.910 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+2017-01-30 09:26:00.911 DEBUG [main] DeserializationContext.java:796   Pushing handler org.apache.axis.encoding.ser.BeanDeserializer@c86b9e3
+2017-01-30 09:26:00.911 DEBUG [main] DeserializationContext.java:1067  Exit: DeserializationContext::startElement()
+2017-01-30 09:26:00.911 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, dealerType)
+2017-01-30 09:26:00.911 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.911 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.encoding.ser.BeanDeserializer@c86b9e3
+2017-01-30 09:26:00.911 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.911 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeDealerType@579b1e3 in target org.apache.axis.encoding.ser.BeanPropertyTarget@10aa41f2
+2017-01-30 09:26:00.912 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.912 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeDealerType@579b1e3 in target org.apache.axis.encoding.CallbackTarget@3af9c5b7
+2017-01-30 09:26:00.912 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.MessageElement:businessHeader
+2017-01-30 09:26:00.912 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.912 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, businessHeader)
+2017-01-30 09:26:00.912 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.912 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.encoding.ser.BeanDeserializer@6aaceffd
+2017-01-30 09:26:00.912 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.913 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeBusinessHeader@579b1e4 in target org.apache.axis.encoding.ser.BeanPropertyTarget@37271612
+2017-01-30 09:26:00.913 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.913 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.TypeBusinessHeader@579b1e4 in target org.apache.axis.encoding.CallbackTarget@ed7f8b4
+2017-01-30 09:26:00.913 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.RPCElement:checkHealthResponse
+2017-01-30 09:26:00.913 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.913 DEBUG [main] DeserializationContext.java:1078  Enter: DeserializationContext::endElement(http://www.bmwgroup.com/dmsCommunications/v1/types, checkHealthResponse)
+2017-01-30 09:26:00.913 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(popHandler00)
+2017-01-30 09:26:00.913 DEBUG [main] DeserializationContext.java:829   Popping handler org.apache.axis.encoding.ser.BeanDeserializer@2e377400
+2017-01-30 09:26:00.913 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setValueInTarget00)
+2017-01-30 09:26:00.914 DEBUG [main] DeserializerImpl.java:251         Set value com.bmwgroup.www.dmsCommunications.v1.types.CheckHealthResponse@d33057a9 in target org.apache.axis.message.RPCParamTarget@4c309d4d
+2017-01-30 09:26:00.914 DEBUG [main] DeserializationContext.java:1106  Popped element stack to org.apache.axis.message.SOAPBody:Body
+2017-01-30 09:26:00.914 DEBUG [main] DeserializationContext.java:1107  Exit: DeserializationContext::endElement()
+2017-01-30 09:26:00.914 DEBUG [main] Call.java:2594                    Exit: Call::invoke(RPCElement)
+2017-01-30 09:26:00.914 DEBUG [main] Call.java:2369                    Exit: Call::invoke(ns, meth, args)
+2017-01-30 09:26:00.914 DEBUG [main] Call.java:1816                    axis.Call.invoke: 149 checkHealth
+2017-01-30 09:26:00.914 DEBUG [main] SOAPPart.java:524                 Enter: SOAPPart::saveChanges
+2017-01-30 09:26:00.914 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.915 DEBUG [main] SerializationContext.java:472     register 'soap' - 'http://schemas.xmlsoap.org/soap/envelope/'
+2017-01-30 09:26:00.915 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.915 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+2017-01-30 09:26:00.915 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(headers00)
+2017-01-30 09:26:00.915 DEBUG [main] SOAPHeader.java:318               0 headers
+2017-01-30 09:26:00.915 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.915 DEBUG [main] SerializationContext.java:1098    Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+2017-01-30 09:26:00.915 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(register00)
+2017-01-30 09:26:00.916 DEBUG [main] SerializationContext.java:472     register '' - 'http://www.bmwgroup.com/dmsCommunications/v1/types'
+2017-01-30 09:26:00.916 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' checkHealthResponse]
+2017-01-30 09:26:00.916 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.916 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:checkHealthResponse
+2017-01-30 09:26:00.916 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' technicalHeader]
+2017-01-30 09:26:00.916 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.916 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:technicalHeader
+2017-01-30 09:26:00.916 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' technicalHeader]
+2017-01-30 09:26:00.917 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.917 DEBUG [main] SerializationContext.java:1208    End element technicalHeader
+2017-01-30 09:26:00.917 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' businessHeader]
+2017-01-30 09:26:00.917 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.917 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:businessHeader
+2017-01-30 09:26:00.917 DEBUG [main] SAXOutputter.java:94              SAXOutputter.startElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' dealerType]
+2017-01-30 09:26:00.917 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(startElem00)
+2017-01-30 09:26:00.917 DEBUG [main] SerializationContext.java:1098    Start element [http://www.bmwgroup.com/dmsCommunications/v1/types]:dealerType
+2017-01-30 09:26:00.917 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' dealerType]
+2017-01-30 09:26:00.917 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.918 DEBUG [main] SerializationContext.java:1208    End element dealerType
+2017-01-30 09:26:00.918 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' businessHeader]
+2017-01-30 09:26:00.918 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.918 DEBUG [main] SerializationContext.java:1208    End element businessHeader
+2017-01-30 09:26:00.918 DEBUG [main] SAXOutputter.java:109             SAXOutputter.endElement ['http://www.bmwgroup.com/dmsCommunications/v1/types' checkHealthResponse]
+2017-01-30 09:26:00.918 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.918 DEBUG [main] SerializationContext.java:1208    End element checkHealthResponse
+2017-01-30 09:26:00.918 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.918 DEBUG [main] SerializationContext.java:1208    End element soap:Body
+2017-01-30 09:26:00.919 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(endElem00)
+2017-01-30 09:26:00.919 DEBUG [main] SerializationContext.java:1208    End element soap:Envelope
+2017-01-30 09:26:00.919 DEBUG [main] ProjectResourceBundle.java:72     org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+2017-01-30 09:26:00.919 DEBUG [main] SOAPPart.java:374                 Setting current message form to: FORM_OPTIMIZED (currentMessage is now org.apache.axis.utils.ByteArray)
+2017-01-30 09:26:00.919 DEBUG [main] SOAPPart.java:537                 Exit: SOAPPart::saveChanges(): org.apache.axis.utils.ByteArray@38102d01

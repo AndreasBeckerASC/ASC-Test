@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="J:/mb_dataserver.jar" sourcepath="/DataServerDaimler/src"/>
+	<classpathentry kind="lib" path="J:/baseToolkit.jar" sourcepath="/ascFramework"/>
+	<classpathentry kind="lib" path="J:/commons-codec-1.7.jar"/>
+	<classpathentry kind="lib" path="J:/jt400Native.jar"/>
+	<classpathentry kind="lib" path="J:/KDB.jar"/>
+	<classpathentry kind="lib" path="J:/axis-1.4_2.jar"/>
+	<classpathentry kind="lib" path="J:/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="J:/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="J:/javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="J:/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="J:/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="J:/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Lokale_Modelle/jars_112/jackrabbit-standalone-2.12.1.jar"/>
+	<classpathentry kind="lib" path="J:/web.careFramework.jar" sourcepath="/web.careFramework"/>
+	<classpathentry kind="lib" path="J:/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="J:/ObRun.jar"/>
+	<classpathentry kind="lib" path="C:/temp/dcom.jar"/>
+	<classpathentry kind="lib" path="J:/jollyday-0.4.7.jar"/>
+	<classpathentry kind="lib" path="J:/checkLicense.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

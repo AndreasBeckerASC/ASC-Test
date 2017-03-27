@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by MS (SET) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by max (moriz) -->
+<!-- Author: Thomas.Menhart@softlab.de -->
+<!-- This schema defines elements and types for usage with the handling of the order base interface -->
+<!-- version history -->
+<!-- version 1.0.0	Thomas Menhart	29.10.2001	initial release -->
+<!-- version 1.1.0	Thomas Menhart	02.11.2001	added acceptOrderBase, acceptOrderBaseResponse -->
+<!--																		added processOrderBase, processOrderBaseResponse -->
+<!--													23.11.2001	stateInformation/batteryVoltage and /tankLevel is now unitValueType -->
+<!--																		timeLine/dates are now of type date -->
+<!--	version 1.2.0	Thomas Menhart	20.01.2002	processOrderBaseResponse has only exception info -->
+<!--	version 1.3.0	Siegfried Bauer		13.02.2002	Changed the type UnitValueType to mileageType for totalDistance, AverageDistance and remaningDistance -->
+<!--	version 1.4.0	Siegfried Bauer		26.03.2002	Added element nextServceDistanceChanged at orderBaseType -->
+<!--																		Changed name of element nextServce to nextServiceDate at orderBaseType -->
+<!--																		Deleted attribute code from element conditionBasedService in orderBaseType -->
+<!--																		Restricted element state at conditionBasedService to enumeration red,yellow,green -->
+<!-- version 1.5.0	Siegfried Bauer		21.05.2002	Removed default value at the attribute units of element mileageType because of redundant definition and problems with parsing -->
+<!-- 																		Removed default value at the attribute isLocal of element flatRateUnitType because of redundant definition and problems with parsing -->
+<!-- 																		Added enumeration value "none" at element state for CBS without a state -->
+<!-- 																		changed minimum occurency of element flatRateName from 1 to 0, because SAM can not provide this information for the order base -->
+<!-- 																		changed minimum occurency of element writeDate from 1 to 0, because this information is only available for  E65 and not for pre E65 vehicles-->
+<!-- 																		added enumeration values "S" and "K" at element originCode-->
+<!-- 																		added attribute "applicationCode" at element orderBaseType-->
+<!-- 																		added enumeration for attribute code at element serviceIntervalDisplay -->
+<!-- 																		changed Type of element readlnDate and writeDate from xsd:date to xsd:dateTime -->
+<!-- 																		added new elements for processing service calls with SAM and TKP -->
+<!-- 													17.06.2002	changed use of attribute manufacturingDate from required to optional-->
+<!-- 													17.06.2002	changed default value in attribute refSchema-->
+<!-- version 1.6.0	Siegfried Bauer		22.07.2002	Removed methods createOrderBaseFromServiceCall because ist is not necessary -->
+<!-- version 1.7.0	Siegfried Bauer		19.08.2002	Added attribute selectionFlag at Element conditionBasedService -->
+<!-- 													19.08.2002	Added new methode updateOrderBase for CPS  -->
+<!-- 													19.08.2002	element technicalCheckDate in orderBaseType was renamed to technicalCheckDistance and the type of the element was changed to mileageType  -->
+<!-- 													03.09.2002	Added new methode transmitOrderBase for CPS  -->
+<!-- 													03.09.2002	Changed from "choice" to "all" under element serviceInformation  in orderBaseType and made elements timeline and serviceIntervalDisplay optional-->
+<!-- 													03.09.2002	Added element flatrateUnitList  under element serviceInformation  in orderBaseType-->
+<!-- 													03.09.2002	Added elements manufactoringDate and leadModel at method createOrderBase for CPS-->
+<!--													03.09.2002	Added element brand under element vehicle of orderBaseType-->
+<!--													03.09.2002	Added element originalStatement  at customerStatementType -->
+<!--													16.09.2002	Added element originCode at methods processOrderBase und createOrderBase -->
+<!-- version 1.8.0	Siegfried Bauer		13.02.2003	Added new type parttype -->
+<!--													13.02.2003	Added new attribut selectionRequest at element conditionBasedService -->
+<!--													13.02.2003	Added new element identifier under element conditionBasedService;it is only used in the communication to the CPS -->
+<!--													13.02.2003	Added new element serviceCounter under element conditionBasedService;it is  only used in the communication to the CPS -->
+<!--													24.02.2003	Removed default value of attribute units of unitValueType-->
+<!--													06.03.2003	added technicalCampaignType and new element technicalCampaignList in orderBaseType for SAM UTC NA -->
+<!--													06.03.2003	customerStatementType was redesigned because of the new requirements of SAM3  -->
+<!--													06.03.2003	Added the new element customerStatement under the elements conditionBasedService and flatRateUnitList in the orderBaseType -->
+<!--													06.03.2003	Set element quantity of element flatRateUnit from minOcc 1 to minOcc 0  -->
+<!--													06.03.2003	New type referenceType was created because of the new requirements of SAM3  -->
+<!--													06.03.2003	Added the new element references at orderBaseType  -->
+<!--													06.07.2003	Added new element partList under element serviceInformation -->
+<!--													21.07.2003	Changed type of element remainingDistance below element serviceIntervalDisplay from mileageType to unitValueType -->
+<!--													30.07.2003	Added element stateSAM to element conditionBasedService in orderBaseType -->
+<!--													30.07.2003	Added optional elements terminalID and branchID to orderBaseType -->
+<!--													15.09.2003	Added 2 new attributes for the SAM-CPS interface at "unitValueType" and "mileageType"-->
+<!--						Wolfgang Funk		11.11.2003	Semantics of "originCode" (Ursprungskennung) ?K?  - Key Reader: extended to "Key Reader and CPS (TKP)" -->
+<!-- version 1.9.0	SET GmbH			30.08.2004	Added information about servicePackage -->
+<!--						SET GmbH			01.09.2004  	Added attribute isInBSIPackage and isUnselectable -->
+<!-- 						SET GmbH			22.10.2004  	Changed mileAgeType xsd:unsignedLong to xsd:long -->
+<!-- 						SET GmbH			22.10.2004  	Added new element averageDistanceLongTerm -->
+<!-- 						SET GmbH			25.10.2004  	Changed Enumeration values from element "state" in "ServicePackageEvalType" from german to english. -->
+<!--						SET GmbH			27.10.2004  	Added new attribute isCBSUnitBSIDue -->
+<!--						SET GmbH			22.12.2004  	Added the enumeration field data corrupt in servicePackage-->
+<!--                    	SET GmbH			13.01.2005  	Added the enumeration fields in ServicePackageEvalType-->
+<!-- 						SET GmbH			31.01.2005  	Changed the name of one enumeration field in ServicePackageEvalType-->
+<!-- version 2.0.0	softlab GmbH		01.02.2005  	Added new attributes JobKey and destination in orderBase-->
+<!-- 						softlab GmbH		01.02.2005  	Added new element packageList in serviceInformation for service repair packs (SRP)-->
+<!--													01.02.2005  	Changed FlatRateUnitList into FlatRateUnitListType and PartList into PartListType -->
+<!--						softlab GmbH		03.02.2005  	copied settlementType from orderhistory under packageList-->
+<!-- version 2.0.1	      SET GmbH			04.03.2005	customerStatementType and length of customer in settlementType were redesigned according version 1.8.0-->
+<!-- version 2.0.2            SET GmbH           11.03.2005	Moved attributes customer, warranty and dealer from settlementType to new type settlementBaseType. -->
+<!--                                                                       Complex-type settlementType will now be extended by settlementBaseType and the contents is the same as before. -->
+<!--         																Added new type settlementHeaderType with boolean attribute serviceInclusive, which will be extended by settlementBaseType. -->
+<!--  version 02.00.03	??Name?? ( msg systems)		20.05.2005 		changed packageList to packageList including List of packages (0..unbounded)     -->
+<!-- version 02.00.04   SET GmbH	 25.07.2005  reduce to DMS relevant requests-->
+<!-- version 02.03.00   msg systems 	 10.10.2005  adding CCList and DTCs-->
+<!-- version 02.03.01   msg systems 	 04.11.2005 adding pricetype -->
+<!-- version 02.03.02   msg systems 	 09.01.2006 removing maxLength in type ccType (longMessage, shortMessage)  and in dtcExtendedType ( measureTitle)-->
+<!-- version 02.04.00   SET GmbH         15.05.2006 adding laraNumber, servicePackage data of SAM 2.6-->
+<!-- version 02.04.01   SET GmbH         08.06.2006 adding extended key data of SAM 2.6-->
+<!-- version 02.04.02   msg systems 	  20.03.2007 remove emumeration for contractVolume , because of local service packages -->
+<xsd:schema targetNamespace="http://www.bmw.com/SAM" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.bmw.com/SAM" elementFormDefault="qualified" version="02.04.02">
+	<xsd:element name="acceptOrderBase">
+		<xsd:annotation>
+			<xsd:documentation>the method for accepting an order base</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="orderBase" type="orderBaseType">
+					<xsd:annotation>
+						<xsd:documentation>see type definition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="refSchema" type="xsd:string" use="required" fixed="orderBase.xsd">
+				<xsd:annotation>
+					<xsd:documentation>The version + the refSchema is used to determine the correct schema to validate against.</xsd:documentation>
+					<xsd:documentation>Two steps are to accomplish :</xsd:documentation>
+					<xsd:documentation>First :  determine the correct schema by reading out the attr. version and  refSchema  				</xsd:documentation>
+					<xsd:documentation>Second : Validate against the schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="version" type="xsd:string" use="required" fixed="02.04.02">
+				<xsd:annotation>
+					<xsd:documentation>The version attribute has to be equal to the version of the schema version attribute.</xsd:documentation>
+					<xsd:documentation>It has 3 parts.</xsd:documentation>
+					<xsd:documentation>The first one is the major version e.g. 01.xx.xx. </xsd:documentation>
+					<xsd:documentation>The second part is a Release version indside a major version,e.g. xx.04.xx.</xsd:documentation>
+					<xsd:documentation>The third part are compatible changes within a release, e.g.xx.xx.01</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="acceptOrderBaseResponse">
+		<xsd:annotation>
+			<xsd:documentation>response from requests on accepting an order base</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="exception" type="exceptionType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>if absent, request without errors; see type definition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="warningList" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Addional warnings but not errors</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="warning" type="exceptionType" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>warnings that give detailed information in error case</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="refSchema" type="xsd:string" use="required" fixed="orderBase.xsd">
+				<xsd:annotation>
+					<xsd:documentation>The version + the refSchema is used to determine the correct schema to validate against.</xsd:documentation>
+					<xsd:documentation>Two steps are to accomplish :</xsd:documentation>
+					<xsd:documentation>First :  determine the correct schema by reading out the attr. version and  refSchema  				</xsd:documentation>
+					<xsd:documentation>Second : Validate against the schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="version" type="xsd:string" use="required" fixed="02.04.02">
+				<xsd:annotation>
+					<xsd:documentation>The version attribute has to be equal to the version of the schema version attribute.</xsd:documentation>
+					<xsd:documentation>It has 3 parts.</xsd:documentation>
+					<xsd:documentation>The first one is the major version e.g. 01.xx.xx. </xsd:documentation>
+					<xsd:documentation>The second part is a Release version indside a major version,e.g. xx.04.xx.</xsd:documentation>
+					<xsd:documentation>The third part are compatible changes within a release, e.g.xx.xx.01</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="processOrderBase">
+		<xsd:annotation>
+			<xsd:documentation>the method for requests on creating an order base (with user interface)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="keyDataRecord" type="keyDataRecordType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>see type definition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="originCode" type="originCodeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>indicates, where the key data came from</xsd:documentation>
+						<xsd:documentation>german: "Ursprungskennung"</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="refSchema" type="xsd:string" use="required" fixed="orderBase.xsd">
+				<xsd:annotation>
+					<xsd:documentation>The version + the refSchema is used to determine the correct schema to validate against.</xsd:documentation>
+					<xsd:documentation>Two steps are to accomplish :</xsd:documentation>
+					<xsd:documentation>First :  determine the correct schema by reading ou? the attr. version and  refSchema  				</xsd:documentation>
+					<xsd:documentation>Second : Validate against the schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="version" type="xsd:string" use="required" fixed="02.04.02">
+				<xsd:annotation>
+					<xsd:documentation>The version attribute has to be equal to the version of the schema version attribute.</xsd:documentation>
+					<xsd:documentation>It has 3 parts.</xsd:documentation>
+					<xsd:documentation>The first one is the major version e.g. 01.xx.xx. </xsd:documentation>
+					<xsd:documentation>The second part is a Release version indside a major version,e.g. xx.04.xx.</xsd:documentation>
+					<xsd:documentation>The third part are compatible changes within a release, e.g.xx.xx.01</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="processOrderBaseResponse">
+		<xsd:annotation>
+			<xsd:documentation>response from requests on processing an order base</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="exception" type="exceptionType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>if absent, request without errors; see type definition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="warningList" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Addional warnings but not errors</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="warning" type="exceptionType" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>warnings that give detailed information in error case</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:all>
+			<xsd:attribute name="refSchema" type="xsd:string" use="required" fixed="orderBase.xsd">
+				<xsd:annotation>
+					<xsd:documentation>The version + the refSchema is used to determine the correct schema to validate against.</xsd:documentation>
+					<xsd:documentation>Two steps are to accomplish :</xsd:documentation>
+					<xsd:documentation>First :  determine the correct schema by reading out the attr. version and  refSchema  				</xsd:documentation>
+					<xsd:documentation>Second : Validate against the schema.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name="version" type="xsd:string" use="required" fixed="02.04.02">
+				<xsd:annotation>
+					<xsd:documentation>The version attribute has to be equal to the version of the schema version attribute.</xsd:documentation>
+					<xsd:documentation>It has 3 parts.</xsd:documentation>
+					<xsd:documentation>The first one is the major version e.g. 01.xx.xx. </xsd:documentation>
+					<xsd:documentation>The second part is a Release version indside a major version,e.g. xx.04.xx.</xsd:documentation>
+					<xsd:documentation>The third part are compatible changes within a release, e.g.xx.xx.01</xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="keyDataRecord" type="keyDataRecordType">
+		<xsd:annotation>
+			<xsd:documentation>the one and only for key data records</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="vehicleType">
+		<xsd:annotation>
+			<xsd:documentation>extends basic vehicle, see type definition</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="vehicleBasicType">
+				<xsd:sequence>
+					<xsd:element name="stateInformation" type="stateInformationType">
+						<xsd:annotation>
+							<xsd:documentation>state of the vehicle at service reception</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="stateInformationType">
+		<xsd:annotation>
+			<xsd:documentation>state dependent information of a vehicle</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="totalDistance" type="mileageType">
+				<xsd:annotation>
+					<xsd:documentation>total distance on vehicle clock</xsd:documentation>
+					<xsd:documentation>german: "Kilometerstand"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="faultInformation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>of vehicle / ECUs</xsd:documentation>
+					<xsd:documentation>german: "Fehlerspeicher gesetzt"</xsd:documentation>
+					<xsd:documentation>for future enhancement only, not used in SAM 2.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="indicator" type="xsd:boolean" use="required">
+						<xsd:annotation>
+							<xsd:documentation>indicates, whether there was a fault entry present</xsd:documentation>
+							<xsd:documentation>german: "Fehlerkennzeichen"</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="miscAttributes" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>miscellaneous attributes of the vehicle</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="batteryVoltage" type="unitValueType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>voltage of battery</xsd:documentation>
+								<xsd:documentation>german: "Batteriespannung"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="tankLevel" type="unitValueType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>level of the tank</xsd:documentation>
+								<xsd:documentation>german: "Tankinhalt"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="coolantTemperature" type="unitValueType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>temperature of the coolant</xsd:documentation>
+								<xsd:documentation>german: "Kuehlmitteltemperatur"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="airTemperature" type="unitValueType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>outside temperature</xsd:documentation>
+								<xsd:documentation>german: "Aussentemperatur"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="orderBaseType">
+		<xsd:annotation>
+			<xsd:documentation>base information for a DMS order</xsd:documentation>
+			<xsd:documentation>derived from data provided by the key reader or via TeleService</xsd:documentation>
+			<xsd:documentation>and  modified by the service advisor</xsd:documentation>
+			<xsd:documentation>provided by SAM and used by the DMS to create an order</xsd:documentation>
+			<xsd:documentation>german: "Auftragsbasis"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="JobKey" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>internal key for identification between ASAP, SAM and DMS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="vehicle">
+				<xsd:annotation>
+					<xsd:documentation>information about the vehicle</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="vehicleType"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="vehicleKey">
+				<xsd:annotation>
+					<xsd:documentation>information from the vehicle key</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="originCode" type="originCodeType">
+							<xsd:annotation>
+								<xsd:documentation>indicates, where the key data came from</xsd:documentation>
+								<xsd:documentation>german: "Ursprungskennung"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="readInDate" type="xsd:dateTime">
+							<xsd:annotation>
+								<xsd:documentation>date, when the key was read by the key reader</xsd:documentation>
+								<xsd:documentation>german: "Einlesedatum"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="writeDate" type="xsd:dateTime" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>date, when the key was written by the vehicle</xsd:documentation>
+								<xsd:documentation>german: "letzte Aktualisierung"</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="extendedKeyAttribute" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>extended key attribute from key number,key profile,batteryStatAction, topUpInformationEngineOil, Instruction,  ILevelPlant, IlevelHO, ...for flexible use with future key layouts</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:simpleContent>
+									<xsd:extension base="xsd:string">
+										<xsd:attribute name="name" type="xsd:NMTOKEN" use="required">
+											<xsd:annotation>
+												<xsd:documentation>name of the extended key attribute</xsd:documentation>
+											</xsd:annotation>
+										</xsd:attribute>
+									</xsd:extension>
+								</xsd:simpleContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="variant" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation>code for the variant of the vehicle key</xsd:documentation>
+							<xsd:documentation>german: "Schluesselvariante"</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="serviceAdvisorUID" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>user-ID of the current service advisor</xsd:documentation>
+					<xsd:documentation>login name of the service advisor using SAM at the time of key reception</xsd:documentation>
+					<xsd:documentation>german: "Benutzerkennung"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="serviceInformation">
+				<xsd:annotation>
+					<xsd:documentation>contains the informations about the services</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="timeLine" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>information about condition based service scopes</xsd:documentation>
+								<xsd:documentation>german: "Zeitstrahl"</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="dates" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="legalInspectionDate" type="xsd:date" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>next legal inspection</xsd:documentation>
+														<xsd:documentation>german: "TUEV"</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="emissionControlInspectionDate" type="xsd:date" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>next emission control inspection</xsd:documentation>
+														<xsd:documentation>german: "Abgasuntersuchung (AU)"</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="technicalCheckDistance" type="mileageType" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>next technical check</xsd:documentation>
+														<xsd:documentation>german: "Sichtpruefung"</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="breakFluidDate" type="xsd:date" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>next break fluid service</xsd:documentation>
+														<xsd:documentation>german: "Bremsfluessigkeit"</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="cbsList" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="conditionBasedService" maxOccurs="unbounded">
+													<xsd:annotation>
+														<xsd:documentation>condition based service</xsd:documentation>
+														<xsd:documentation>german: "bedarfsorientierter Service"</xsd:documentation>
+													</xsd:annotation>
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element name="description" type="descriptionType">
+																<xsd:annotation>
+																	<xsd:documentation>of service scope</xsd:documentation>
+																	<xsd:documentation>german : "CBS-Bezeichnung"</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="state">
+																<xsd:annotation>
+																	<xsd:documentation>Language independent status of the service according to the value in the key</xsd:documentation>
+																	<xsd:documentation>german : "Status"</xsd:documentation>
+																	<xsd:documentation>The possible states are : red,yellow,green for CBS with state or none for CBS without state</xsd:documentation>
+																</xsd:annotation>
+																<xsd:simpleType>
+																	<xsd:restriction base="xsd:string">
+																		<xsd:enumeration value="Red">
+																			<xsd:annotation>
+																				<xsd:documentation>german : "rot"</xsd:documentation>
+																			</xsd:annotation>
+																		</xsd:enumeration>
+																		<xsd:enumeration value="Yellow">
+																			<xsd:annotation>
+																				<xsd:documentation>german : "gelb"</xsd:documentation>
+																			</xsd:annotation>
+																		</xsd:enumeration>
+																		<xsd:enumeration value="Green">
+																			<xsd:annotation>
+																				<xsd:documentation>german : "gruen"</xsd:documentation>
+																			</xsd:annotation>
+																		</xsd:enumeration>
+																		<xsd:enumeration value="None">
+																			<xsd:annotation>
+																				<xsd:documentation>german : "kein Status"</xsd:documentation>
+																			</xsd:annotation>
+																		</xsd:enumeration>
+																	</xsd:restriction>
+																</xsd:simpleType>
+															</xsd:element>
+															<xsd:element name="stateSAM">
+																<xsd:annotation>
+																	<xsd:documentation>Language specific status of the service like displayed in SAM.</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:simpleContent>
+																		<xsd:extension base="xsd:string">
+																			<xsd:attribute name="language" type="xsd:language" use="required"/>
+																		</xsd:extension>
+																	</xsd:simpleContent>
+																</xsd:complexType>
+															</xsd:element>
+															<xsd:element name="flatRateUnit" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>to be done for this service scope</xsd:documentation>
+																	<xsd:documentation>german: "Arbeitswert (AW)"</xsd:documentation>
+																	<xsd:documentation>For the order base in SAM 2 the attribute isLocal is always set on the value "false".</xsd:documentation>
+																</xsd:annotation>
+																<xsd:complexType>
+																	<xsd:complexContent>
+																		<xsd:extension base="flatRateUnitType">
+																			<xsd:sequence>
+																				<xsd:element name="description" type="descriptionType" minOccurs="0">
+																					<xsd:annotation>
+																						<xsd:documentation>of the flatrate unit</xsd:documentation>
+																						<xsd:documentation>german: "Beschreibung AW"</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																				<xsd:element name="quantity" type="unitValueType">
+																					<xsd:annotation>
+																						<xsd:documentation>of the flatrate unit used</xsd:documentation>
+																						<xsd:documentation>german : "Anzahl AWs"</xsd:documentation>
+																						<xsd:documentation>For the order base in SAM 2 the attribute "units" is always set on the value "AW".</xsd:documentation>
+																					</xsd:annotation>
+																				</xsd:element>
+																			</xsd:sequence>
+																		</xsd:extension>
+																	</xsd:complexContent>
+																</xsd:complexType>
+															</xsd:element>
+															<xsd:element name="remaining" type="unitValueType" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>distance / time for service scope to become due
+("red")</xsd:documentation>
+																	<xsd:documentation>german: "Restweg"</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="includeRange" type="unitValueType" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>range, within the service should be done even if there is no immediate need</xsd:documentation>
+																	<xsd:documentation>german: "Vorziehwert"</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="serviceCounter" type="xsd:unsignedInt" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>contains the number of services done; only used by CPS</xsd:documentation>
+																	<xsd:documentation>german: "Servicezaehler"</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="identifier" type="xsd:string" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>contais the unique identifier for the cbs; only used by CPS</xsd:documentation>
+																	<xsd:documentation>these elements are a future enhancement for the iinterface to Autotex</xsd:documentation>
+																	<xsd:documentation>german: "CBS-Kennung"</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+															<xsd:element name="customerStatement" type="customerStatementType" minOccurs="0">
+																<xsd:annotation>
+																	<xsd:documentation>contains customer statement which belongs to a CBS position</xsd:documentation>
+																</xsd:annotation>
+															</xsd:element>
+														</xsd:sequence>
+														<xsd:attribute name="associatedLabourOperation" type="xsd:boolean" use="optional" default="false">
+															<xsd:annotation>
+																<xsd:documentation>indicates, whether the service scope is an associated labour operation</xsd:documentation>
+																<xsd:documentation>true = operation is associated; false = operation is the main operation
+only one operation can be the main operation.</xsd:documentation>
+																<xsd:documentation>german: "Verbundarbeit"</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+														<xsd:attribute name="selectionFlag" type="xsd:boolean" use="optional" default="true">
+															<xsd:annotation>
+																<xsd:documentation>The selection flag is set to true if the cbs is selected in SAM or set to false if isn't selected in SAM. This flag is only used by TKP.</xsd:documentation>
+																<xsd:documentation>german: "Selektionskennzeichen"</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+														<xsd:attribute name="selectionRequest" type="xsd:boolean" use="optional" default="false">
+															<xsd:annotation>
+																<xsd:documentation>used by a cbs to mark the cbs item which should be selected</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+														<xsd:attribute name="isInBSIPackage" type="xsd:boolean" use="optional" default="false">
+															<xsd:annotation>
+																<xsd:documentation>true= Is includes in a BSI-Package, false= is customer wish or warrenty</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+														<xsd:attribute name="isCBSUnitBSIDue" type="xsd:boolean" use="optional" default="false">
+															<xsd:annotation>
+																<xsd:documentation>true= is due (and accountable on a BSI package) , false= is not due but in the BSI range (and accountable on a BSI package) </xsd:documentation>
+																<xsd:documentation>german: "due aufgrund von BSI Vorziehwerten.</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+														<xsd:attribute name="isUnselectable" type="xsd:boolean" use="optional" default="false">
+															<xsd:annotation>
+																<xsd:documentation>true=not changeable, as it is a part of "?ergabeinspection" or BSI-Servicepackage</xsd:documentation>
+															</xsd:annotation>
+														</xsd:attribute>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="averageDistance" type="mileageType" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>in the past</xsd:documentation>
+											<xsd:documentation>german: "Durchschnittskilometer"</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="averageDistanceLongTerm" type="mileageType" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>in the past</xsd:documentation>
+											<xsd:documentation>german: "Durchschnittskilometer (Langzeitwert)"</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="nextServiceDate" type="xsd:date" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>date at which the next service should to be done </xsd:documentation>
+											<xsd:documentation>used for the services depending on time </xsd:documentation>
+											<xsd:documentation>german: "Datum des naechsten Service"</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="nextServiceDistance" type="mileageType" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>remaining distance at which the next service should to be done </xsd:documentation>
+											<xsd:documentation>used for the services depending on distance</xsd:documentation>
+											<xsd:documentation>german: "noch zu fahrende Wegstrecke bis zum naechsten Service"</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="serviceIntervalDisplay" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>before E65</xsd:documentation>
+								<xsd:documentation>german: "ServiceIntervallAnzeige (SIA)"</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence minOccurs="0">
+									<xsd:element name="remainingDistance" type="unitValueType" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>until service scope becomes due</xsd:documentation>
+											<xsd:documentation>german: "Restweg"</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="sid3Lights" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>state of ligths for sid3</xsd:documentation>
+											<xsd:documentation>german: "SIA3 Lampen"</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:attribute name="green" type="xsd:unsignedByte" use="optional" default="0">
+												<xsd:annotation>
+													<xsd:documentation>number of green lights</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+											<xsd:attribute name="yellow" type="xsd:unsignedByte" use="optional" default="0">
+												<xsd:annotation>
+													<xsd:documentation>number of yellow lights</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+											<xsd:attribute name="red" type="xsd:unsignedByte" use="optional" default="0">
+												<xsd:annotation>
+													<xsd:documentation>number of red lights</xsd:documentation>
+												</xsd:annotation>
+											</xsd:attribute>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+								<xsd:attribute name="code" use="required">
+									<xsd:annotation>
+										<xsd:documentation>identifies the service scope</xsd:documentation>
+										<xsd:documentation>Possible Values : 00 = no information;01 = oil;02 = inspection;03 = oil and time inspection;04 = inspection and time inspection;05 = time inspection</xsd:documentation>
+										<xsd:documentation>german: "Code fuer faellige Serviceart"</xsd:documentation>
+									</xsd:annotation>
+									<xsd:simpleType>
+										<xsd:restriction base="xsd:string">
+											<xsd:enumeration value="00"/>
+											<xsd:enumeration value="01"/>
+											<xsd:enumeration value="02"/>
+											<xsd:enumeration value="03"/>
+											<xsd:enumeration value="04"/>
+											<xsd:enumeration value="05"/>
+										</xsd:restriction>
+									</xsd:simpleType>
+								</xsd:attribute>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="flatRateUnitList" type="flatRateUnitListType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>contains a list of additional informations; only used by CPS and SAM to add additional flat rate units, textual descriptions or workshop instructions</xsd:documentation>
+								<xsd:documentation>CPS could insert a "T" in attribute number which means that it is only a textual position. (then quantity has always the value 1, isLocal is true and the text is in element description) </xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="partList" type="partListType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>contains a list of additional parts; future enhancement for the interface to a claims settlement system</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="packageList" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>contains a list of packaged services (SRP or others)</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="package" minOccurs="0" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>contains a packaged services (SRP or others)</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="source" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>source of the package: generated in APAS, KSD, SAM, TC, XPR, ...</xsd:documentation>
+													</xsd:annotation>
+													<xsd:simpleType>
+														<xsd:restriction base="xsd:string">
+															<xsd:enumeration value="APAS"/>
+															<xsd:enumeration value="KSD"/>
+															<xsd:enumeration value="SAM"/>
+															<xsd:enumeration value="TC"/>
+															<xsd:enumeration value="XPR"/>
+														</xsd:restriction>
+													</xsd:simpleType>
+												</xsd:element>
+												<xsd:element name="currentNumber" type="xsd:string" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>internal 0-based index of the package in the package list</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="settlement" type="settlementType" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>settlement of the package: warranty, dealer,
+customer (possible values: "C" = Customer
+"L" = Leasing
+"I" = Insurance),
+serviceInclusive (possible values:
+"R" = CBS in CBS Range
+"D" = CBS is due)</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="laraNumber" type="xsd:string" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>identifier od LARA application</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="additionalNotes" type="xsd:string" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>comments about the package (dealer internal)</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+												<xsd:element name="packageNumber" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>reference number of the package</xsd:documentation>
+													</xsd:annotation>
+													<xsd:simpleType>
+														<xsd:restriction base="xsd:string">
+															<xsd:maxLength value="13"/>
+														</xsd:restriction>
+													</xsd:simpleType>
+												</xsd:element>
+												<xsd:element name="flateRateUnitList" type="flatRateUnitListType" minOccurs="0"/>
+												<xsd:element name="partList" type="partListType" minOccurs="0"/>
+												<xsd:element name="price" type="priceType" minOccurs="0">
+													<xsd:annotation>
+														<xsd:documentation>contains the price for the part</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="technicalCampaignList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the list with the technical campaigns which were set to status"active"; only for future use with SAM2 UTC NA</xsd:documentation>
+					<xsd:documentation>this field is used by the SAM UT? NA</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="technicalCampaign" type="technicalCampaignType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="customer" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>some data which identifies the customer e.g. address or plate number</xsd:documentation>
+					<xsd:documentation>german: "Kundenidentifikation"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="identification" type="xsd:string" use="optional">
+								<xsd:annotation>
+									<xsd:documentation>contains e.g. the name or some unique id for the customer</xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="customerStatement" type="customerStatementType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains customer statement which belongs to the order; only for future use with SAM3</xsd:documentation>
+					<xsd:documentation>Not filled in SAM 2; for future enhancements only.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="servicePackage" type="servicePackageEvalType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>XXXcontains the service-Package data including the state</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="references" type="referenceType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the references on information resources like PuMA; only for future use with SAM3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="systemProperties" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains some info's and ID's concerning the workplace of the service advisor</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="workplaceID" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>contains a system ID which identifies the PC of the service advisor</xsd:documentation>
+							</xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:maxLength value="250"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="branchID" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>contains the ID of the branch/store where the workplace of the service advisor is located</xsd:documentation>
+							</xsd:annotation>
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:maxLength value="250"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="destination" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>identifies the workshop destination of the order for dealers with several outlets</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ccList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>list of cc message information</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ccMessages" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>see type definition</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="ccType"/>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="dtcList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>list of dtcInfo and the url to access PuMA with the search information for measures</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="dtcInfo" type="dtcExtendedType" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>see type definition</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="url" type="xsd:anyURI">
+							<xsd:annotation>
+								<xsd:documentation>PuMA-URL including the eseries and the DTC's</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="applicationCode" use="optional" default="SAM">
+			<xsd:annotation>
+				<xsd:documentation>code for the application which created the order base
+default value is "SAM"</xsd:documentation>
+				<xsd:documentation>german : "Anwendungskennzeichen"</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="10"/>
+					<xsd:minLength value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="servicePackageEvalType">
+		<xsd:annotation>
+			<xsd:documentation>Definition of a Service-Package</xsd:documentation>
+		</xsd:annotation>
+		<xsd:all>
+			<xsd:element name="contract" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>singular identification for the service package</xsd:documentation>
+					<xsd:documentation>german: Einzigartige Kennung des Service-Paketes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="contractVolume" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>defines the volume of the contract: Basic, Service, Repair, Full</xsd:documentation>
+					<xsd:documentation>german: Umfang des Vertrags (Vertragsart)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="origin">
+				<xsd:annotation>
+					<xsd:documentation>defines the origin of the contract</xsd:documentation>
+					<xsd:documentation>german: Herkunft des SI Pakets</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="2"/>
+						<xsd:minLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="duration" type="unitValueType">
+				<xsd:annotation>
+					<xsd:documentation>see type definition</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="distance" type="mileageType">
+				<xsd:annotation>
+					<xsd:documentation>see type definition</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="startDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>start date of the service-package = start of warranty.</xsd:documentation>
+					<xsd:documentation>german: Start Datum des Service-Paketes = Gewaehrleistungsanfang. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="endDate" type="xsd:date">
+				<xsd:annotation>
+					<xsd:documentation>end date of the service-package = end of warranty. </xsd:documentation>
+					<xsd:documentation>german: Start Datum des Service-Paketes = Gewaehrleistungsende.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="descriptionType">
+				<xsd:annotation>
+					<xsd:documentation>short description about the SA-number</xsd:documentation>
+					<xsd:documentation>german: Kurztext fuer SA-Nummer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="state">
+				<xsd:annotation>
+					<xsd:documentation>valid or invalid service package</xsd:documentation>
+					<xsd:documentation>german : "Gueltiges oder ungueltiges Service-Paket"</xsd:documentation>
+					<xsd:documentation>The possible states are : Aktiv, Laufleistung ueberschritten, End Datum ueberschritten, Laufleistung/End ueberschritten, Datum,Startdatum und Erstzulassungdatum fehlt deshalb kann Gueltigkeit nicht ermittelt werden, Gueltiger Vertragsdaten Faelligkeitdaten (Berechnungsbasis) fehlerhaft, VertragsdatenFehlerhaft </xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="active"/>
+						<xsd:enumeration value="duration exceeded"/>
+						<xsd:enumeration value="end date exceeded"/>
+						<xsd:enumeration value="duration/end date exceeded"/>
+						<xsd:enumeration value="start date missing"/>
+						<xsd:enumeration value="active contract without calculation base"/>
+						<xsd:enumeration value="contract data corrupt"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="chassisNumberType">
+		<xsd:annotation>
+			<xsd:documentation>the chassis number of a vehicle also called Vehicle Identification Number (short: vin)</xsd:documentation>
+			<xsd:documentation>german: "Fahrgestellnummer"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="vinShort" use="required">
+			<xsd:annotation>
+				<xsd:documentation>the last 7 digits of the chassis number</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="7"/>
+					<xsd:maxLength value="7"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="vinLongPrefix" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>the first 10 digits of the chassis number</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="10"/>
+					<xsd:maxLength value="10"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:simpleType name="inputIndicatorType">
+		<xsd:annotation>
+			<xsd:documentation>indicates, where the data is from</xsd:documentation>
+			<xsd:documentation>german: "Eingabeindikator"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="K">
+				<xsd:annotation>
+					<xsd:documentation>data is derived from vehicle key</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="M">
+				<xsd:annotation>
+					<xsd:documentation>data has been typed in by user</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="vinType">
+		<xsd:annotation>
+			<xsd:documentation>Vehicle Identification Number also called chassis number</xsd:documentation>
+			<xsd:documentation>with SAM specific extension</xsd:documentation>
+			<xsd:documentation>german: "Fahrgestellnummer"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="chassisNumberType">
+				<xsd:attribute name="inputIndicator" type="inputIndicatorType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>see type definition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="exceptionType">
+		<xsd:annotation>
+			<xsd:documentation>describes the state of the request</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="exceptionInfo" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>additional textual information of exception;for technical use only;not displayed to the user</xsd:documentation>
+					<xsd:documentation>german: "Freier Beschreibungstext des aufgetretenen Fehlers;dieser Text wird dem Benutzer nicht angezeigt,sondern als technische Fehlerbeschreibung geloggt"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>the name of the SAM exception</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="descriptionType">
+		<xsd:annotation>
+			<xsd:documentation>textual description in a specified language</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="language" type="xsd:language" use="required">
+					<xsd:annotation>
+						<xsd:documentation>contains the language code</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="unitValueType">
+		<xsd:annotation>
+			<xsd:documentation>generic value with unit</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="units" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>The attribute contains the unit for the value. Possible values are defined by the  international standardised SI-units , e.g. "kg", "m" ..., and "pieces" for values which are not measured in SI-units.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="15"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="unitsInDisplayFormat" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Contains the unit as language specific text for displaying to the user e.g. "Wochen" (german), "weeks" (english) or "Meilen" (german), "miles" (english).</xsd:documentation>
+						<xsd:documentation>The contents of this attribute equals the corresponding string displayed in the SAM GUI.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="valueInDisplayFormat" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Contains the value in language specific format for displaying to the user e.g. "1.000" (german format), "1,000" and so on.</xsd:documentation>
+						<xsd:documentation>The contents of this attribute equals the corresponding string displayed in the SAM GUI.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="mileageType">
+		<xsd:annotation>
+			<xsd:documentation>mileage value with unit km or miles</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:long">
+				<xsd:attribute name="units" use="required">
+					<xsd:annotation>
+						<xsd:documentation>defaults to pieces</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="km"/>
+							<xsd:enumeration value="miles"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="unitsInDisplayFormat" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Contains the unit as language specific text for displaying to the user e.g.  "Meilen" (german), "miles" (english).</xsd:documentation>
+						<xsd:documentation>The contents of this attribute equals the corresponding string displayed in the SAM GUI.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="valueInDisplayFormat" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Contains the value in language specific format for displaying to the user e.g. "1.000" (german foramt) or "1,000".</xsd:documentation>
+						<xsd:documentation>The contents of this attribute equals the corresponding string displayed in the SAM GUI.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="customerStatementType">
+		<xsd:annotation>
+			<xsd:documentation>the customer said...</xsd:documentation>
+			<xsd:documentation>german: "Kundenaussage"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="observation" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains the qualified type of observation</xsd:documentation>
+					<xsd:documentation>german: "Art" (qualifiziert)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="4000"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="location" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains the qualified location of the observation</xsd:documentation>
+					<xsd:documentation>german: "Wahrnehmungsort" (qualifiziert)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="4000"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="background" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains the qualified circumstances of observation</xsd:documentation>
+					<xsd:documentation>german: "Umwelt" (qualifiziert)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="4000"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="originalStatement" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains the original statement of the customer.</xsd:documentation>
+					<xsd:documentation>german: "O-Ton Kunde"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="4000"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="flatRateUnitType">
+		<xsd:annotation>
+			<xsd:documentation>BMW and non-BMW flatrate units</xsd:documentation>
+			<xsd:documentation>german: "Arbeitswert (AW)"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="number" use="required">
+			<xsd:annotation>
+				<xsd:documentation>identification of flatrate unit</xsd:documentation>
+				<xsd:documentation>german: "AW-Nummer"</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="7"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="isLocal" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>for local (non BMW) flatrate units</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="optionalEquipmentType">
+		<xsd:annotation>
+			<xsd:documentation>single optional equipment for a vehicle</xsd:documentation>
+			<xsd:documentation>german: "Sonderausstattung (SA)"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:all>
+			<xsd:element name="description" type="descriptionType">
+				<xsd:annotation>
+					<xsd:documentation>of the optional equipment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+		<xsd:attribute name="code" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation>identifying code for the optional equipment</xsd:documentation>
+				<xsd:documentation>german: "SA-Code"</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="settlementBaseType">
+		<xsd:annotation>
+			<xsd:documentation>indicates, how something was settled</xsd:documentation>
+			<xsd:documentation>german: "Abrechnungsart"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="warranty" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>settlement by warranty</xsd:documentation>
+				<xsd:documentation>german: "Gewaehrleistung"</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="dealer" type="xsd:boolean" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>internal dealer settlement</xsd:documentation>
+				<xsd:documentation>german: "interne Haendlerverrechnung""</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="customer" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>the customer had to pay</xsd:documentation>
+				<xsd:documentation>german: "Kundenverrechnung"</xsd:documentation>
+				<xsd:documentation>For actual allowed values see interface contract SAM2-DMS. Possible values upto now are : C = Customer, I = Insurance, L = Leasing. If there is no customer settlement the attribute isn't used in the XML.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="settlementType">
+		<xsd:annotation>
+			<xsd:documentation>Will be extended by settlementBaseType.</xsd:documentation>
+			<xsd:documentation>german: Wird durch settlementBaseType erweitert.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="settlementBaseType">
+				<xsd:attribute name="serviceInclusive" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If calculated for a BSI Package.</xsd:documentation>
+						<xsd:documentation>german: Abrechnung in BSI Packet.</xsd:documentation>
+						<xsd:documentation>Values: D = Due, R = In Service Inclusive Range.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="1"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="settlementHeaderType">
+		<xsd:annotation>
+			<xsd:documentation>Will be extended by settlementBaseType.</xsd:documentation>
+			<xsd:documentation>german: Wird durch settlementBaseType erweitert.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="settlementBaseType">
+				<xsd:attribute name="serviceInclusive" type="xsd:boolean" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If calculated for a BSI Package.</xsd:documentation>
+						<xsd:documentation>german: Abrechnung in BSI Packet.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="vehicleBasicType">
+		<xsd:annotation>
+			<xsd:documentation>basic vehicle data</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="vehicleIdentification">
+				<xsd:annotation>
+					<xsd:documentation>see type definition</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="vinType"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="brand" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the brand of the repaired car; see enumeration for possible values</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="BMW">
+							<xsd:annotation>
+								<xsd:documentation>= BMW cars</xsd:documentation>
+							</xsd:annotation>
+						</xsd:enumeration>
+						<xsd:enumeration value="MINI">
+							<xsd:annotation>
+								<xsd:documentation>= Mini</xsd:documentation>
+							</xsd:annotation>
+						</xsd:enumeration>
+						<xsd:enumeration value="RR">
+							<xsd:annotation>
+								<xsd:documentation>= Rolls Royse</xsd:documentation>
+							</xsd:annotation>
+						</xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="leadModel" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>lead model of the vehicle</xsd:documentation>
+					<xsd:documentation>german: "Leittyp"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:attribute name="code" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation>###</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="inputIndicator" type="inputIndicatorType" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>see type definition</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="model">
+				<xsd:annotation>
+					<xsd:documentation>model of the vehicle</xsd:documentation>
+					<xsd:documentation>german: "Typschlluessel</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="modelDesignation" type="xsd:string" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>designation of the vehicle model</xsd:documentation>
+								<xsd:documentation>german: "Modellbezeichnung"</xsd:documentation>
+								<xsd:documentation>In the order base this element is filled by SAM via the KSD.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+					<xsd:attribute name="code" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation>contains the code for the model</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+					<xsd:attribute name="inputIndicator" type="inputIndicatorType" use="optional">
+						<xsd:annotation>
+							<xsd:documentation>see type definition</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="colour">
+				<xsd:annotation>
+					<xsd:documentation>colour of the vehicle varnish</xsd:documentation>
+					<xsd:documentation>german: "Lackfarbe"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="description" type="descriptionType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>textual description of the colour</xsd:documentation>
+								<xsd:documentation>This element is only filled by FBM in the service history.</xsd:documentation>
+								<xsd:documentation>In the order base this element is omitted.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:all>
+					<xsd:attribute name="code" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation>code for the colour</xsd:documentation>
+							<xsd:documentation>german: "Farbcode"</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="upholstery">
+				<xsd:annotation>
+					<xsd:documentation>upholstery of the vehicle</xsd:documentation>
+					<xsd:documentation>german : "Polsterung"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="description" type="descriptionType" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>textual description of the upholstery</xsd:documentation>
+								<xsd:documentation>This element is only filled by FBM in the service history.</xsd:documentation>
+								<xsd:documentation>In the order base this element is omitted.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:all>
+					<xsd:attribute name="code" type="xsd:string" use="required">
+						<xsd:annotation>
+							<xsd:documentation>code for the upholstery</xsd:documentation>
+							<xsd:documentation>german: "Polstercode"</xsd:documentation>
+						</xsd:annotation>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="productionDate" type="xsd:date" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>date of production</xsd:documentation>
+					<xsd:documentation>german: "Produktionsdatum"</xsd:documentation>
+					<xsd:documentation>Data for this element is not available in FBM or SAM at the moment. </xsd:documentation>
+					<xsd:documentation>For future enhancement.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="firstRegistrationDate" type="xsd:date" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>date of the first registration of the vehicle</xsd:documentation>
+					<xsd:documentation>german: "Erstzulassungsdatum"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="optionalEquipmentList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>options of the vehicle</xsd:documentation>
+					<xsd:documentation>german: "Sonderausstattungsliste"</xsd:documentation>
+					<xsd:documentation>This element is only filled by FBM in the service history.</xsd:documentation>
+					<xsd:documentation>In the order base this element ?s omitted.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="optionalEquipment" type="optionalEquipmentType" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>see type definition</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="manufacturingDate" type="xsd:gYearMonth" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>date of manufacturing</xsd:documentation>
+				<xsd:documentation>german: "Baustand"</xsd:documentation>
+				<xsd:documentation>In the order base this attribute is filled by SAM via the KSD.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:simpleType name="keyDataRecordType">
+		<xsd:annotation>
+			<xsd:documentation>the binary data records from the vehicle key always need to be transmitted base64 encoded</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:base64Binary"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="brandType">
+		<xsd:annotation>
+			<xsd:documentation>Specifying the brand.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="BMW"/>
+			<xsd:enumeration value="Mini"/>
+			<xsd:enumeration value="BMWMotorcycle"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="partType">
+		<xsd:annotation>
+			<xsd:documentation>BMW and non-BMW parts</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="description" type="descriptionType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>of the part</xsd:documentation>
+					<xsd:documentation>german: "Beschreibung "</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="quantity" type="unitValueType">
+				<xsd:annotation>
+					<xsd:documentation>of the part used</xsd:documentation>
+					<xsd:documentation>german : "Anzahl Teile"</xsd:documentation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="price" type="priceType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the price for the part</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="settlement" type="settlementType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>settlement of the package: warranty, dealer,
+customer (possible values: "C" = Customer
+"L" = Leasing
+"I" = Insurance),
+serviceInclusive (possible values:
+"R" = CBS in CBS Range
+"D" = CBS is due)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="number" use="required">
+			<xsd:annotation>
+				<xsd:documentation>identification number of the part</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="11"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="isLocal" type="xsd:boolean" use="required">
+			<xsd:annotation>
+				<xsd:documentation>part is local (non BMW)</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="technicalCampaignType">
+		<xsd:annotation>
+			<xsd:documentation>code and description of a technical campaign</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="specialDefectCode" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>the code of the special defect</xsd:documentation>
+					<xsd:documentation>german: "Sonderbefundnummer"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="description" type="descriptionType">
+				<xsd:annotation>
+					<xsd:documentation>textual description of the campaign</xsd:documentation>
+					<xsd:documentation>german: "Sonderbefundbeschreibung"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="state">
+				<xsd:annotation>
+					<xsd:documentation>the state of the campaign</xsd:documentation>
+					<xsd:documentation>german: "Status"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="open">
+							<xsd:annotation>
+								<xsd:documentation>the campaign has to be done and can be set to active</xsd:documentation>
+							</xsd:annotation>
+						</xsd:enumeration>
+						<xsd:enumeration value="active">
+							<xsd:annotation>
+								<xsd:documentation>the campaign is marke as in work for the requesting dealer</xsd:documentation>
+							</xsd:annotation>
+						</xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="minFlatRate" type="xsd:unsignedInt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the minimum amount of flat rates for this technical campaign</xsd:documentation>
+					<xsd:documentation>german: "minimale Anzahl AW's"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="maxFlatRate" type="xsd:unsignedInt" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the maximum amount of flat rates for this technical campaign</xsd:documentation>
+					<xsd:documentation>german: "maximale Anzahl AW's"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="referenceType">
+		<xsd:annotation>
+			<xsd:documentation>contains references on other sources of information like technical campaigns, repair orders of the central history and measures from PuMA</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="specialDefectCode" minOccurs="0" maxOccurs="20">
+				<xsd:annotation>
+					<xsd:documentation>contains number and description of a specialDefectCode for a recall campaign</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="number" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>contains the special defect code number</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="description" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>contains the description that belongs to the special defect code number</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="historyRepairOrder" minOccurs="0" maxOccurs="5">
+				<xsd:annotation>
+					<xsd:documentation>contains number and date of a repair order from the central history (FBM) </xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="date" type="xsd:date">
+							<xsd:annotation>
+								<xsd:documentation>contains the date of the order</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="orderNumber" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>contains the number of the order</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="measure" type="xsd:string" minOccurs="0" maxOccurs="5">
+				<xsd:annotation>
+					<xsd:documentation>contains a measure number from PuMA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="originCodeType">
+		<xsd:annotation>
+			<xsd:documentation>indicates, where the key data came from</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="K">
+				<xsd:annotation>
+					<xsd:documentation>data comes from the key reader or from the capacity planning system (CPS)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="S">
+				<xsd:annotation>
+					<xsd:documentation>data comes from a service call</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="flatRateUnitListType">
+		<xsd:sequence>
+			<xsd:element name="flatRateUnit" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains either a flat rate, a textual description from the CPS or a workshop instruction from SAM</xsd:documentation>
+					<xsd:documentation>german: "Arbeitswert (AW)"</xsd:documentation>
+					<xsd:documentation>For the order base in SAM 2 the attribute isLocal is always set on the value "false".</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="flatRateUnitType">
+							<xsd:sequence>
+								<xsd:element name="description" type="descriptionType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>of the flatrate unit</xsd:documentation>
+										<xsd:documentation>german: "Beschreibung AW"</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="quantity" type="unitValueType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>of the flatrate unit used</xsd:documentation>
+										<xsd:documentation>german : "Anzahl AWs"</xsd:documentation>
+										<xsd:documentation>For the order base in SAM 2 the attribute "units" is always set on the value "AW".</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="customerStatement" type="customerStatementType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>contains customer statement which belongs to a workshop instruction</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="price" type="priceType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>contains the price for the part</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="settlement" type="settlementType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>settlement of the package: warranty, dealer,
+customer (possible values: "C" = Customer
+"L" = Leasing
+"I" = Insurance),
+serviceInclusive (possible values:
+"R" = CBS in CBS Range
+"D" = CBS is due)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="partListType">
+		<xsd:sequence>
+			<xsd:element name="part" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>contains the parts used</xsd:documentation>
+					<xsd:documentation>these elements are a future enhancement for the iinterface to Autotex</xsd:documentation>
+					<xsd:documentation>german: "Teileliste"</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="partType"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="dtcExtendedType">
+		<xsd:annotation>
+			<xsd:documentation>extended DTC type for the response</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="code">
+				<xsd:annotation>
+					<xsd:documentation>the code of the measure</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="8"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="measureNumber">
+				<xsd:annotation>
+					<xsd:documentation>number of the measure</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:nonNegativeInteger">
+						<xsd:totalDigits value="38"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="measureTitle" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>the title of the measure</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ccType">
+		<xsd:annotation>
+			<xsd:documentation>Definiion of the CheckControl Type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="code">
+				<xsd:annotation>
+					<xsd:documentation>Unique code of the CC Message</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="5"/>
+						<xsd:maxLength value="5"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="shortMessage">
+				<xsd:annotation>
+					<xsd:documentation>short message of the cc</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="longMessage">
+				<xsd:annotation>
+					<xsd:documentation>long message of the cc</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="priceType">
+		<xsd:annotation>
+			<xsd:documentation>capsules all data required for a price information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="netPrice">
+				<xsd:annotation>
+					<xsd:documentation>contains the net price</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:totalDigits value="8"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="grossPrice" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the gross price</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:totalDigits value="8"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="valueAddedTax" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>contains the value-added tax which applies to the net price</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:totalDigits value="8"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="flagInclusivePrice" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>true, if it is an all inclusive price</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="flagfixPrice" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>true, if it is an fix price</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="currency" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>contains the currency according to ISO 4217</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>
